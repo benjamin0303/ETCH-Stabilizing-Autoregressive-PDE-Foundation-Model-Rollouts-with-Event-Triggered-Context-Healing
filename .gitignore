@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+third_party/
+data/
+checkpoints/
+runs/
+outputs/
+*.pt
+*.pth
+*.npz
+*.h5
+*.arrow
+.env
+*.local.yaml

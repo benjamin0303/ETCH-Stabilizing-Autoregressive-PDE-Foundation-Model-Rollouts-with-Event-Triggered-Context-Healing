@@ -1,0 +1,31 @@
+# Run commands from the repository root. Replace local data/checkpoint paths.
+data_root: data
+normalizer: checkpoints/mean_std.pt
+dpot_checkpoint: checkpoints/dpot_cylinder.pth
+velocity_checkpoint: checkpoints/velocity.pt
+pressure_checkpoint: checkpoints/pressure.pt
+invfusion_root: third_party/InvFusion
+split: configs/split.json
+tap_layout: configs/taps.json
+threshold: 0.05
+frame_interval_ms: 5.0
+
+dpot:
+  model_name: dpot
+  model_type: dpot
+  img_size: 128
+  patch_size: 8
+  in_channels: 4
+  out_channels: 4
+  embed_dim: 1024
+  depth: 6
+  n_blocks: 8
+  modes: 32
+  mlp_ratio: 1
+  out_layer_dim: 32
+  normalize: false
+  act: gelu
+  time_agg: exp_mlp
+  n_cls: 12
+  in_timesteps: 20
+  out_timesteps: 20
